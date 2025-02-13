@@ -36,9 +36,12 @@ int main() {
 
     // 3️⃣ SVM 모델 학습
     Ptr<SVM> svm = SVM::create(); // SVM 모델 생성
-    svm->setType(SVM::C_SVC);
-    svm->setKernel(SVM::LINEAR);
+    svm->setType(SVM::C_SVC); // SVM 유형 C-Support Vector Classification로 설정(다중 클래스 분류)
+    svm->setKernel(SVM::LINEAR); // 선형 커널(직선 혹은 평면으로 나눌 수 있을 때 적합)
     svm->setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));
+    // TermCriteria::MAX_ITER : 최대 반복 횟수를 기준으로 학습 종료
+    // 100 : 최대 반복 횟수(100번 반복 후 학습 종료)
+    // 1e-6 학습 중 손실(Loss)이 10의 -6승 이하로 떨어지면 학습 종료
 
     cout << "SVM 학습 시작..." << endl;
     svm->train(trainingData, ROW_SAMPLE, labelMat); // 차량 데이터 학습
@@ -46,13 +49,13 @@ int main() {
     cout << "SVM 학습 완료!" << endl;
 
     // 4️⃣ KNN 모델 학습
-    Ptr<KNearest> knn = KNearest::create();
+    Ptr<KNearest> knn = KNearest::create(); // kNN 모델 생성
     knn->train(trainingData, ROW_SAMPLE, labelMat); // 차량 데이터 학습
     cout << "KNN 학습 완료!" << endl;
 
     // 5️⃣ 테스트 데이터 예측
     Mat testImg = imread("/Users/parksungsu/Desktop/full-stack/test.jpg", IMREAD_GRAYSCALE);
-    resize(testImg, testImg, Size(64, 64));
+    resize(testImg, testImg, Size(64, 64)); // 이미지 크기 변환
 
     vector<float> testFeature;
     computeHOG(testImg, testFeature); // testImg의 특징 벡터를 계산하고 testFeature에 저장
@@ -126,7 +129,7 @@ void loadDataset(vector<Mat> &images, vector<int> &labels, string folder, int la
     for (size_t i = 0; i < filenames.size(); i++) {
         Mat img = imread(filenames[i], IMREAD_GRAYSCALE);
         if (img.empty()) continue;
-        resize(img, img, Size(64, 64));
+        resize(img, img, Size(64, 64)); // 이미지 크기 변환
         images.push_back(img); // 요소 추가
         labels.push_back(label); // 요소 추가
     }
