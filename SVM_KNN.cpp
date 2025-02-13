@@ -49,7 +49,7 @@ int main() {
     cout << "SVM 학습 완료!" << endl;
 
     // 4️⃣ KNN 모델 학습
-    Ptr<KNearest> knn = KNearest::create(); // kNN 모델 생성
+    Ptr<KNearest> knn = KNearest::create(); // KNN 모델 생성
     knn->train(trainingData, ROW_SAMPLE, labelMat); // 차량 데이터 학습
     cout << "KNN 학습 완료!" << endl;
 
@@ -83,7 +83,7 @@ int main() {
             break;
     }
 
-    // kNN 결과에 대한 라벨 출력
+    // KNN 결과에 대한 라벨 출력
     cout << "🚗 KNN 예측 결과: ";
     switch (static_cast<int>(knnResult)) {
         case 0:
