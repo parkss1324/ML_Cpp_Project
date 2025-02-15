@@ -50,6 +50,7 @@ int main() {
 
     // 4️⃣ KNN 모델 학습
     Ptr<KNearest> knn = KNearest::create(); // KNN 모델 생성
+    cout << "KNN 학습 시작..." << endl;
     knn->train(trainingData, ROW_SAMPLE, labelMat); // 차량 데이터 학습
     cout << "KNN 학습 완료!" << endl;
 
