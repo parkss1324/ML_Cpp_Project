@@ -23,9 +23,35 @@ Visual Studio Code와 OpenCV, 머신러닝 기술을 활용하여 알고리즘�
 - **소프트웨어** : Visual Studio Code, OpenCV
 
 ## 📌 주요 기능
-- OpenCV 내 머신러닝 기능을 이용합니다.
-- 머신러닝으로 학습한 알고리즘을 바탕으로 차량 이미지를 구별합니다.
-- 같은 이미지라도 알고리즘에 따라 다른 결과가 나타나는 것을 알 수 있습니다.
+- OpenCV 내 머신러닝 기능을 이용합니다.<br><br>
+
+- 폴더에 학습할 차량 이미지들을 첨부합니다.
+<p align="center">
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/96d6057a-f7f8-4538-bba6-edfcba1fd028" /><br>
+<승용차 폴더><br><br>
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/b9cdd7ef-077f-4403-9372-8d92ef5cc6d0" /><br>
+<트럭 폴더><br><br>
+<img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/a3e147fd-cf6a-42c2-9b89-3f7ba38fdd0e" /><br>
+<버스 폴더><br><br>
+</p>
+
+- 머신러닝 알고리즘을 설정합니다.
+<p align="center">
+<img width="650" height="80" alt="Image" src="https://github.com/user-attachments/assets/fa735265-6801-4967-9dc4-daf3bf0c18c5" /><br>
+<데이터셋 폴더><br><br>
+<img width="650" height="259" alt="Image" src="https://github.com/user-attachments/assets/cd7b719d-ffef-4cf4-a0f5-dac0892cef21" /><br>
+<알고리즘(SVM) 설정><br><br>
+<img width="650" height="298" alt="Image" src="https://github.com/user-attachments/assets/2d66a802-8f50-4cd9-a2e7-448adff74305" /><br>
+<알고리즘(KNN) 설정><br><br>
+</p>
+
+- 샘플 이미지를 통해 각 알고리즘이 동작하는지 확인합니다.
+<p align="center">
+<img width="485" height="269" alt="Image" src="https://github.com/user-attachments/assets/2c4862c1-22fb-4b30-b8f2-1a02dfabbeb3" /><br>
+<샘플 이미지><br><br>
+<img width="171" height="85" alt="Image" src="https://github.com/user-attachments/assets/40de2ad8-4d6b-4dd7-9725-17fdf09aa17f" /><br>
+<동작 결과><br><br>
+</p>
 
 ## ✒️ 머신러닝
 - 머신러닝 개념: [https://www.intel.co.kr/content/www/kr/ko/manufacturing/what-is-machine-vision.html](https://terms.naver.com/entry.naver?docId=3347329&cid=40942&categoryId=32845)
